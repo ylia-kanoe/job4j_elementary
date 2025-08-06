@@ -7,7 +7,7 @@ public class Check {
             for (boolean item : data) {
                 if (temp != item) {
                     result = false;
-                    return result;
+                    break;
                 }
             }
         return result;
