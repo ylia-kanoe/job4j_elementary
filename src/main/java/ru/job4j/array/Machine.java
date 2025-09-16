@@ -7,11 +7,10 @@ public class Machine {
         int[] coins = {10, 5, 2, 1};
         int[] result = new int[100];
         int size = 0;
-        int num = money - price;
-        for (int i = 0; i < coins.length; i++) {
-            while (num >= coins[i]) {
-                result[size] = coins[i];
-                num = num - coins[i];
+        for (int coin : coins) {
+            while (money - coin >= price) {
+                result[size] = coin;
+                money = money - coin;
                 size++;
             }
         }
